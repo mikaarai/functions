@@ -1,0 +1,29 @@
+.filter-buttons {
+    margin-bottom: 20px;
+}
+.filter-buttons button {
+    padding: 24px 48px;
+    margin-right: 8px;
+    cursor: pointer;
+    border: none;
+    background-color: #ff2525e6;
+    color: white;
+    font-size: 24px;
+	border-radius: 5px;
+}
+.filter-buttons button:hover {
+    background-color: #ff25257e;
+}
+.card {
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.card h3 {
+    margin: 0;
+    font-size: 18px;
+}
+.card p {
+    margin: 5px 0;
+}
