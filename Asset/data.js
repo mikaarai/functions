@@ -9,7 +9,7 @@ let data = [
         "graduated": "2025",
         "linkedin": "https://www.linkedin.com/in/mika-arai-pmp-leed-8641b067/",
         "company": "N/A",
-        "portfolio": "mikaarai.com",
+        "portfolio": "https://mikaarai.com",
         "hobby": "Speakeasy & food"
     },
     {
