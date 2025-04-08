@@ -1,67 +1,146 @@
-// SECTION: script runs only after the webpage's content is fully loaded. Prevent error. Checking if data exist.
-// If data is missing, this prints an error message in the browser console to help with debugging.
-document.addEventListener("DOMContentLoaded", function () {
-    if (typeof data === "undefined") {
-        console.error("Data is not loaded. Check if data.js is properly linked.");
-        return;
-    }
+// best practices by recommended by tutor
+// tells the browser wait until the entire html doc is fully loaded before running the JavaScript inside the block
+// prevents errors like trying to grab elements that don’t exist because they haven’t loaded
+// https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event
+document.addEventListener("DOMContentLoaded", () => {
+	console.log("DOM fully loaded.");
 
-    // connects alumni data from data js
-    generateAlumniCards(data);
+// safety check to make sure data.js file was loaded correctly
+// not loaded → error message 
+// loaded → proceeds with the rest of your code
+// if data.js is missing, it will warn me instead of crashing
 
-    // filter option by CD, DT, SD. show the program that was clicked.
-    document.getElementById("btn-cd").addEventListener("click", function () {
-        filterByProgram("CD");
-    });
+	if (typeof data === "undefined") {
+		console.error("data is not loaded. Make sure data.js is linked correctly.");
+		return;
+	}
 
-    document.getElementById("btn-dt").addEventListener("click", function () {
-        filterByProgram("DT");
-    });
+	console.log("data loaded:", data.length, "items");
 
-    document.getElementById("btn-sd").addEventListener("click", function () {
-        filterByProgram("SD");
-    });
+
+
+// display all alumni by default
+	generateAlumniCards(data);
+
+// when tap it prompts you to go to filter
+// why i need it? so that the user know what's the first thing to do
+// https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView
+	const ctaBtn = document.getElementById("cta-explore");
+	const filterSection = document.getElementById("filter-section");
+
+	if (ctaBtn && filterSection) {
+		ctaBtn.addEventListener("click", () => {
+			filterSection.scrollIntoView({ behavior: "smooth" });
+		});
+	}
+
+	// all filter buttons
+	const filters = [
+		{ id: "btn-all", program: "ALL" },
+		{ id: "btn-cd", program: "CD" },
+		{ id: "btn-dt", program: "DT" },
+		{ id: "btn-sd", program: "SD" },
+		{ id: "btn-pd", program: "PD" }
+	];
+
+	filters.forEach(({ id, program }) => {
+		const button = document.getElementById(id);
+		if (button) {
+			button.addEventListener("click", () => {
+				console.log(`🔍 Filter: ${program}`);
+
+				// remove active from all
+				filters.forEach(({ id }) => {
+					const btn = document.getElementById(id);
+					if (btn) btn.classList.remove("active");
+				});
+
+				// add active to clicked one
+				button.classList.add("active");
+
+				// apply filter
+				if (program === "ALL") {
+					generateAlumniCards(data);
+				} else {
+					filterByProgram(program);
+				}
+			});
+		}
+	});
 });
 
-// SECTION: filter function by program
-function filterByProgram(program) {
-    //goes through each person in the data and checks the program if they matches
-    const filteredData = data.filter(person => person.program === program);
-
-    // will display the alumni cards only for the selected program
-    generateAlumniCards(filteredData);
-}
-
-// SECTION: get an HTML element with the ID
-// If (!container)... checks if the container element exists on the page.
-function generateAlumniCards(alumniData) {
-    let container = document.getElementById("alumni-container");
-
-    if (!container) {
-        console.error("Alumni container not found.");
-        return;
+// search engine by name or role 
+// user can easily search by name or role depending on their goal
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input?utm_source=chatgpt.com
+document.addEventListener("DOMContentLoaded", () => {
+    const searchInput = document.getElementById("search-input");
+  
+    if (searchInput) {
+      searchInput.addEventListener("input", () => {
+        const searchTerm = searchInput.value.toLowerCase();
+  
+        const filteredResults = data.filter(person => {
+          const nameMatch = person.fullName && person.fullName.toLowerCase().includes(searchTerm);
+          const roleMatch = person.role && person.role.toLowerCase().includes(searchTerm);
+          return nameMatch || roleMatch;
+        });
+  
+        generateAlumniCards(filteredResults);
+      });
     }
+  });
+  
+// open tab with google survey link for people to join the community
+// https://developer.mozilla.org/en-US/docs/Web/API/Window/open
+  document.addEventListener("DOMContentLoaded", () => {
+	const joinBtn = document.getElementById("cta-join");
+	if (joinBtn) {
+		joinBtn.addEventListener("click", () => {
+			window.open(
+				"https://docs.google.com/forms/d/e/1FAIpQLSdl-8kdkWzOacSq8_vS71pQwdvuvJLnnKCd-qklQf1pw_7Q9g/viewform",
+				"_blank"
+			);
+		});
+	}
+});
 
-    // ensures when new data is loaded, old cards are removed.
-    container.innerHTML = "";
-    // loops each item (representing an individual person) in the alumniData array.
-    alumniData.forEach(person => {
-        let card = document.createElement("div");
-        card.className = "card";
 
-        // innerHTML is used to set the content inside the div.
-        card.innerHTML = `
-            <h3>${person.fullName || "No Name"}</h3>
-            <p>${person.program || "No Program"}, ${person.degree || "No Degree"}</p>
-            <p>Role: ${person.role || "N/A"}</p>
-            <p>Hobby: ${person.hobby || "N/A"}</p>
-            <div class="icons">
-                ${person.linkedin ? `<a href="${person.linkedin}" target="_blank">🔗 LinkedIn</a>` : ""}
-                ${person.portfolio ? `<a href="${person.portfolio}" target="_blank">🌐 Portfolio</a>` : ""}
-            </div>
-            <a class="message-btn" href="mailto:${person.email}">📩 Message</a>
-        `;
-
-        container.appendChild(card);
-    });
+// filter by program 
+function filterByProgram(program) {
+	const filteredData = data.filter(person => person.program === program);
+	generateAlumniCards(filteredData);
 }
+
+// generate cards 
+function generateAlumniCards(alumniData) {
+	const container = document.getElementById("alumni-container");
+
+	if (!container) {
+		console.error("Alumni container not found.");
+		return;
+	}
+
+	container.innerHTML = "";
+	console.log(`Rendering ${alumniData.length} cards`);
+
+	alumniData.forEach(person => {
+		const card = document.createElement("div");
+		card.className = "card";
+
+		card.innerHTML = `
+			<h3>${person.fullName || "No Name"}</h3>
+			<p>${person.program || "No Program"}, ${person.degree || "No Degree"}</p>
+			<p>👨‍⚕️ ${person.role || "N/A"}</p>
+			<p>🎨 ${person.hobby || "N/A"}</p>
+			<div class="icons">
+				<p>${person.linkedin ? `<a href="${person.linkedin}" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>` : ""}</p>
+				<p>${person.portfolio ? `<a href="${person.portfolio}" target="_blank" rel="noopener noreferrer">🌐 Portfolio</a>` : ""}</p>
+			</div>
+			<h6><a class="message-btn" href="mailto:${person.email}">Say Hi 👋</a></h6>
+		`;
+
+		container.appendChild(card);
+	});
+}
+
+

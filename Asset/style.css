@@ -1,29 +1,152 @@
-.filter-buttons {
-    margin-bottom: 20px;
+:root {
+    /* font size */
+    --base-size: 1rem;
+    
+    /* background colors */
+    --background-color: black;
+    --background-color-primary: white;
+    --background-gray-light: #ccc;
+
+    /* text color */
+    --color-gray-light: #5f6368;
+    --color-red: #ED212D;
+    --color-light-red: #e65e67;
+    --color-primary: white;
+    
+    /* spacing */
+    --margin-top: 1rem;
+    --margin-right: 1rem;
+    --margin-bottom: 1rem;
+    --padding-top: 1rem;
+    --padding-bottom: 1rem;
+    --padding-left: 1rem;
+    --padding-right: 1rem;
+    
+    /* font family */
+    --font-family-h1: 'Be Vietnam Pro';
+    --font-family-desciption: 'Be Vietnam Pro';
+    --font-family-h2: 'Be Vietnam Pro';
+        
+    font-size: var(--base-size);
 }
-.filter-buttons button {
-    padding: 24px 36px;
-    margin-right: 8px;
-    cursor: pointer;
-    border: none;
-    background-color: #ff2525e6;
-    color: white;
-    font-size: 24px;
-	border-radius: 5px;
+
+
+
+/* heading */
+body {
+    padding-left: var(--padding-left);
+    padding-right: var(--padding-right);
 }
-.filter-buttons button:hover {
-    background-color: #ff25257e;
+h1 {
+    margin-top: calc(6*var(--margin-top));
+    margin-bottom: var(--margin-top);
+    font-size: calc(3*var(--base-size));
+    font-family: var(--font-family-h1);
+    transition: all 0.2s ease;
 }
+h2 {
+    font-family: var(--font-family-desciption);
+    font-size: var(--base-size);
+    margin-bottom: calc(2*var(--margin-top));
+    line-height: 150%;
+    color: var(--color-gray-light);
+    transition: all 0.2s ease;
+}
+#cta-explore {
+    font-family: var(--font-family-description);
+    font-size: var(--base-size);
+    margin-bottom: calc(7 * var(--margin-top));
+    border: 1px solid var(--color-red);
+    padding: 1em 2em;
+    font-weight: 600;
+    background-color: var(--color-red);
+    color: var(--font-color-primary);
+    margin-right: calc(0.2 * var(--margin-right));
+    transition: all 0.2s ease;
+}
+#cta-join {
+    font-family: var(--font-family-desciption);
+    font-size: var(--base-size);
+    margin-bottom: calc(7*var(--margin-top));
+    border: 1px solid var(--color-red);
+    padding: 1em 2em;
+    font-weight: 600;
+    color: var(--color-red);    
+    transition: all 0.2s ease;
+} 
+em {
+    font-weight: bold;
+    color: var(--color-red);
+}
+
+
+
+/* card */
 .card {
-    margin: 20px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    margin-bottom: var(--margin-top);
+    padding: var(--padding-top);
+    border: 1px solid #979595e1;
 }
 .card h3 {
     margin: 0;
-    font-size: 18px;
+    font-family: var(--font-family-desciption);
+    font-size: calc(2*var(--base-size));
+    margin-bottom: var(--margin-bottom);
+}
+.card h6 {
+    margin-right: -1rem;
+    margin-left: -1rem;
+    margin-bottom: -1rem;
+    font-family: var(--font-family-desciption);
+    font-size: var(--base-size);
+    background-color: var(--color-light-red);
+    color: var(--color-primary);
+    padding: 1em 1em;
+    margin-top: var(--margin-top);
+    text-align: center;
+    font-weight: 500;
 }
 .card p {
-    margin: 5px 0;
+    margin: 4px 0;
+    font-family: var(--font-family-desciption);
+    font-size: var(--base-size);
+    color: var(--color-gray-light);
+}
+
+
+
+/* search engine */
+.search-box {
+    margin-bottom: 1.5rem;
+    transition: all 0.2s ease;
+  }
+  
+.search-box input {
+    padding: 1em 1em;
+    width: 100%;
+    max-width: 400px;
+    font-size: 1rem;
+    border: 1px solid #979595e1;
+    font-family: var(--font-family-desciption);
+    color: var(--color-gray-light);
+}
+
+
+
+/*filter button*/
+.filter-buttons button {
+    padding: 1em 1.2em;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    font-family: var(--font-family-desciption);
+    background-color: #ffffff;
+    color: var(--color-gray-light);
+    margin-bottom: calc(1*var(--margin-bottom));
+    border: 1px solid #979595e1;
+}
+/*active button*/
+.filter-buttons button.active {
+    background-color: var(--background-gray-light);
+    color: var(--color-primary);
 }

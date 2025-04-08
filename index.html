@@ -6,20 +6,49 @@
 	<link href="Asset/style.css" rel="stylesheet">
 	<link href="Asset/reset.css" rel="stylesheet">
 	<title>Parsons Alumni Portal</title>
+
+	<!-- google font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Almarai:wght@300;400;700;800&family=Alumni+Sans+Pinstripe:ital@0;1&family=Bangers&family=Bayon&family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bruno+Ace&family=Cinzel+Decorative:wght@400;700;900&family=Didact+Gothic&family=Diplomata+SC&family=Enriqueta:wght@400;500;600;700&family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=Gloock&family=Goudy+Bookletter+1911&family=Luckiest+Guy&family=Manrope:wght@200..800&family=Martian+Mono:wght@100..800&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Serif+Georgian:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&family=Slabo+13px&family=Slackey&family=Special+Elite&family=Teko:wght@300..700&family=UnifrakturMaguntia&family=WindSong:wght@400;500&display=swap" rel="stylesheet">
 </head>
+
+
+
 <body>
- <!-- filter -->
- <h1>Parsons Alumni Portal</h1>
- <p>A Parsons Alumni Network Portal designed to help alumni and students connect effortlessly through messaging.
+<!-- heading -->
+<h1>Say Hi 👋 to <em>PARSONS</em> Alumni</h1>
+<h2>
+	Hey there, welcome to the Parsons Alumni Portal! Think of this as your go-to space to connect with fellow alumni and students. 
+	Wanna swap career advice? Show off your latest work? Share those secret-gem electives you loved? You’re in the right place. 
+</h2>
 
-	 This platform will be super useful because you can seek career advice, showcase your work, explore opportunities, and give recommendations on courses and electives to future students. 
- </p>
 
- <div class="filter-buttons">
+
+<!-- cta buttons -->
+	<div class="cta">
+		<button id="cta-explore">Explore</button>
+		<button id="cta-join">Join</button>
+	</div>
+
+<div class="search-box">
+	<input type="text" id="search-input" placeholder="🔍 Search by name or role...">
+</div>
+
+
+
+<!-- filter -->
+<div class="filter-buttons" id="filter-section">
+	<button id="btn-all" class="active">ALL</button>
+	<button id="btn-sd">SD</button>
 	<button id="btn-cd">CD</button>
 	<button id="btn-dt">DT</button>
-	<button id="btn-sd">SD</button>
+	<button id="btn-pd">PD</button>
 </div>
+
+
+
+<!-- data/cards -->
     <div class="container" id="alumni-container"></div>
 	<script defer src="Asset/data.js"></script>
 	<script defer src="Asset/script.js"></script>
