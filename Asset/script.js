@@ -1,4 +1,4 @@
-// best practices by recommended by tutor
+// best practices recommended by tutor
 // tells the browser wait until the entire html doc is fully loaded before running the JavaScript inside the block
 // prevents errors like trying to grab elements that don’t exist because they haven’t loaded
 // https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event
@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // safety check to make sure data.js file was loaded correctly
 // not loaded → error message 
-// loaded → proceeds with the rest of your code
+// loaded → proceeds with the rest of my code
 // if data.js is missing, it will warn me instead of crashing
 
 	if (typeof data === "undefined") {
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	}
 
-	// all filter buttons
+	// proram filter 
 	const filters = [
 		{ id: "btn-all", program: "ALL" },
 		{ id: "btn-cd", program: "CD" },
@@ -68,6 +68,33 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	});
 });
+
+	// year filters
+	document.getElementById("yearFilter").addEventListener("change", (event) => {
+		const selectedRange = event.target.value;
+		filterByYearRange(selectedRange);
+	  });
+	  
+	  function filterByYearRange(range) {
+		let filtered;
+	  
+		if (range === "earlier") {
+		  filtered = data.filter(person => {
+			const grad = person.graduated;
+			return grad === "2019" || grad === "Earlier than 2018";
+		  });
+		} else {
+		  const [start, end] = range.split("-").map(Number);
+		  filtered = data.filter(person => {
+			const year = parseInt(person.graduated);
+			return !isNaN(year) && year >= start && year <= end;
+		  });
+		}
+	  
+		generateAlumniCards(filtered);
+	  }	  
+	  
+  
 
 // search engine by name or role 
 // user can easily search by name or role depending on their goal
@@ -132,12 +159,13 @@ function generateAlumniCards(alumniData) {
 			<p>${person.program || "No Program"}, ${person.degree || "No Degree"}</p>
 			<p>👨‍⚕️ ${person.role || "N/A"}</p>
 			<p>🎨 ${person.hobby || "N/A"}</p>
-			<div class="icons">
-				<p>${person.linkedin ? `<a href="${person.linkedin}" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>` : ""}</p>
-				<p>${person.portfolio ? `<a href="${person.portfolio}" target="_blank" rel="noopener noreferrer">🌐 Portfolio</a>` : ""}</p>
-			</div>
-			<h6><a class="message-btn" href="mailto:${person.email}">Say Hi 👋</a></h6>
-		`;
+			
+			<div class="card-social">
+			${person.linkedin ? `<a href="${person.linkedin}" target="_blank" class="social-icon linkedin" aria-label="LinkedIn"><img src="Asset/linkedin-icon.png" alt="LinkedIn"></a>` : ""}
+			${person.email ? `<a href="mailto:${person.email}" class="social-icon email" aria-label="Email"><img src="Asset/email-icon.webp" alt="Email"></a>` : ""}
+ 			${person.portfolio ? `<a href="${person.portfolio}" target="_blank" class="social-icon portfolio" aria-label="Portfolio"><img src="Asset/portfolio-icon.svg" alt="Portfolio" /></a>` : ""}
+  			</div>
+`;
 
 		container.appendChild(card);
 	});
