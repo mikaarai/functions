@@ -125,32 +125,14 @@ h2 {
     color: var(--color-gray-light);
   }
 .card-social .social-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    transition: transform 0.2s ease;
-  }
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--color-red);
+}
 .card-social .social-icon img {
     width: 100%;
     height: auto;
-  }
-/* scale 1.5 times to provide feedback that is clickable */
-/* https://developer.mozilla.org/en-US/docs/Web/CSS/transform */
-.card-social .social-icon:hover {
-    transform: scale(1.5); 
-  }
-.card-social .linkedin {
-    background-color: var(--background-blue);
-  }
-.card-social .email {
-    background-color: var(--color-light-red);
-  }
-.card-social .portfolio {
-    background-color: var(--background-purple);
-  }
+}
 
 
 

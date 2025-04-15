@@ -240,8 +240,8 @@ function generateAlumniCards(alumniData) {
     		` : `<div></div>`}
 			
 			<div class="card-social">
-			${person.linkedin ? `<a href="${person.linkedin}" target="_blank" class="social-icon linkedin" aria-label="LinkedIn"><img src="Asset/linkedin-icon.png" alt="LinkedIn"></a>` : ""}
-			${person.email ? `<a href="mailto:${person.email}" class="social-icon email" aria-label="Email"><img src="Asset/email-icon.webp" alt="Email"></a>` : ""}
+			${person.linkedin ? `<a href="${person.linkedin}" target="_blank" class="social-icon linkedin" aria-label="LinkedIn"><img src="Asset/linkedin-icon.svg" alt="LinkedIn"></a>` : ""}
+			${person.email ? `<a href="mailto:${person.email}" class="social-icon email" aria-label="Email"><img src="Asset/email-icon.svg" alt="Email"></a>` : ""}
  			${person.portfolio ? `<a href="${person.portfolio}" target="_blank" class="social-icon portfolio" aria-label="Portfolio"><img src="Asset/portfolio-icon.svg" alt="Portfolio" /></a>` : ""}
   			</div>
 			</div>
