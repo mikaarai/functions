@@ -141,7 +141,6 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin-top: var(--margin-top);
 }
 .chat-tag {
     display: flex;
