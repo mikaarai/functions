@@ -207,3 +207,30 @@ function generateAlumniCards(alumniData) {
 }
 
 
+// section: back to top; grab button element
+const backToTopBtn = document.getElementById("back-to-top");
+
+// when user scrolls down more than 300px, show the button
+// window.scrollY tells how far you’ve scrolled from the top
+// it check the value on scroll, and show the button only when the scroll is past 300px
+// https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollY
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    backToTopBtn.style.display = "block";
+  } else {
+    backToTopBtn.style.display = "none";
+  }
+});
+
+// scroll to the top smoothly when the button is clicked
+// top: scrolls to the top
+// behavior: "smooth": makes it smooth
+// https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo
+backToTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+
+
