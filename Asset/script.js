@@ -110,7 +110,7 @@ filters.forEach(({ id, program }) => {
 		const selectedRange = event.target.value;
 		filterByYearRange(selectedRange);
 	  });
-	  
+
 // start of the function	  
 	  function filterByYearRange(range) {
 		let filtered;
@@ -205,6 +205,10 @@ function filterByProgram(program) {
 // the ? : syntax lets you write if/else logic inside an expression 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator
 
+
+// open to chat = 	<div class="card-footer">
+
+
 function generateAlumniCards(alumniData) {
 	const container = document.getElementById("alumni-container");
 
@@ -223,10 +227,10 @@ function generateAlumniCards(alumniData) {
 		card.innerHTML = `
 			<h3>${person.fullName || "No Name"}</h3>
 			<p>${person.program || "No Program"}, ${person.degree || "No Degree"}</p>
+			<p>🎓 ${person.graduated || "N/A"}</p>
 			<p>👨‍⚕️ ${person.role || "N/A"}</p>
 			<p>🎨 ${person.hobby || "N/A"}</p>
-
-			// open to chat tag
+			
 			<div class="card-footer">
     		${person.openToChat ? `
       		<div class="chat-tag">

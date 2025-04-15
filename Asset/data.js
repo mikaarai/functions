@@ -36,7 +36,7 @@ let data = [
         "company": "",
         "portfolio": "https://www.devanshkhajanchi.com/",
         "hobby": "Specialty Coffee",
-        "openToChat": "true"
+        openToChat: true,
     },
     {
         "fullName": "Iris Chang",
@@ -61,7 +61,7 @@ let data = [
         "company": "",
         "portfolio": "https://bhaktigarach.com/",
         "hobby": "Cooking, Hiking, Travel",
-        "openToChat": "true"
+        openToChat: true,
     },
     {
         "fullName": "Jaehyun Ahn (Irene)",
@@ -122,7 +122,7 @@ let data = [
         "company": "N/A",
         "portfolio": "opalnattakitta.framer.website",
         "hobby": "Cooking",
-        "openToChat": "true"
+        openToChat: true,
     },
     {
         "fullName": "Amy Lewis",
@@ -278,7 +278,8 @@ let data = [
         "linkedin": "https://www.linkedin.com/in/yeo-kyeong-chung/",
         "company": "S&P Global",
         "portfolio": "",
-        "hobby": "Dancing, cooking, art stuff(drawing, painting)"
+        "hobby": "Dancing, cooking, art stuff(drawing, painting)",
+        openToChat: true,
     },
     {
         "fullName": "Yash Sonwaney",
@@ -290,7 +291,8 @@ let data = [
         "linkedin": "https://www.linkedin.com/in/yashsonwaney",
         "company": "",
         "portfolio": "",
-        "hobby": ""
+        "hobby": "",
+        openToChat: true,
     },
     {
         "fullName": "Carlos Salom",
@@ -314,7 +316,8 @@ let data = [
         "linkedin": "https://www.linkedin.com/in/sethlukin/",
         "company": "n/a",
         "portfolio": "https://sethlukin.com/",
-        "hobby": ""
+        "hobby": "",
+        openToChat: true,
     },
     {
         "fullName": "Andre Magracia",
@@ -326,7 +329,8 @@ let data = [
         "linkedin": "https://www.linkedin.com/in/andremagracia/",
         "company": "JUICE Creative group",
         "portfolio": "https://www.andremagracia.com/",
-        "hobby": "Basketball, Formula One, Sneakers, Airplanes, and watches"
+        "hobby": "Basketball, Formula One, Sneakers, Airplanes, and watches",
+        openToChat: true,
     },
     {
         "fullName": "Giordana Pulpo",
@@ -338,7 +342,8 @@ let data = [
         "linkedin": "https://www.linkedin.com/in/giordana-pulpo",
         "company": "Abstractive Health",
         "portfolio": "GiordanaPulpo.com",
-        "hobby": "Travelling, try new restaurants, hiking, photography, reading"
+        "hobby": "Travelling, try new restaurants, hiking, photography, reading",
+        openToChat: true,
     },
     {
         "fullName": "Yuri Kawada",
@@ -399,7 +404,7 @@ let data = [
         "company": "",
         "portfolio": "https://mavinkurve.work/",
         "hobby": "reading and writing",
-        "openToChat": "true"
+        openToChat: true,
     },
     {
         "fullName": "Jolyn Tran",
@@ -423,7 +428,8 @@ let data = [
         "linkedin": "https://www.linkedin.com/in/simrankpabla/",
         "company": "American Express",
         "portfolio": "",
-        "hobby": "legos, reading, working out, cooking"
+        "hobby": "legos, reading, working out, cooking",
+        openToChat: true,
     },
     {
         "fullName": "Jayna Choksi",
@@ -435,7 +441,8 @@ let data = [
         "linkedin": "www.linkedin.com/in/jaynachoksi",
         "company": "",
         "portfolio": "jaynachoksi.com",
-        "hobby": "Cooking and Football!"
+        "hobby": "Cooking and Football!",
+        openToChat: true,
     }
 ];
    
