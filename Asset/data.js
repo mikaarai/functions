@@ -10,7 +10,8 @@ let data = [
         "linkedin": "https://www.linkedin.com/in/mika-arai-pmp-leed-8641b067/",
         "company": "N/A",
         "portfolio": "https://mikaarai.com",
-        "hobby": "Speakeasy & food"
+        "hobby": "Speakeasy & food",
+        openToChat: true,
     },
     {
         "fullName": "Inji Mammadli",
@@ -34,7 +35,8 @@ let data = [
         "linkedin": "www.linkedin.com/in/devanshkh",
         "company": "",
         "portfolio": "https://www.devanshkhajanchi.com/",
-        "hobby": "Specialty Coffee"
+        "hobby": "Specialty Coffee",
+        "openToChat": "true"
     },
     {
         "fullName": "Iris Chang",
@@ -58,7 +60,8 @@ let data = [
         "linkedin": "www.linkedin.com/in/bhaktigarach",
         "company": "",
         "portfolio": "https://bhaktigarach.com/",
-        "hobby": "Cooking, Hiking, Travel"
+        "hobby": "Cooking, Hiking, Travel",
+        "openToChat": "true"
     },
     {
         "fullName": "Jaehyun Ahn (Irene)",
@@ -118,7 +121,8 @@ let data = [
         "linkedin": "https://www.linkedin.com/in/nattakitta-chuasiriphattana",
         "company": "N/A",
         "portfolio": "opalnattakitta.framer.website",
-        "hobby": "Cooking"
+        "hobby": "Cooking",
+        "openToChat": "true"
     },
     {
         "fullName": "Amy Lewis",
@@ -394,7 +398,8 @@ let data = [
         "linkedin": "https://www.linkedin.com/in/sachi-mavinkurve-5aab41158/",
         "company": "",
         "portfolio": "https://mavinkurve.work/",
-        "hobby": "reading and writing"
+        "hobby": "reading and writing",
+        "openToChat": "true"
     },
     {
         "fullName": "Jolyn Tran",

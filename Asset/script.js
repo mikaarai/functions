@@ -174,6 +174,21 @@ function filterByProgram(program) {
 }
 
 // generate cards 
+// note to open to chat tag: use template literals ` ` and a conditional (ternary) operator to decide whether to include "Open to chat" tag based on the data from data.js
+// person.openToChat is a true or false
+// ? = if it’s true, do this
+// : = else, do this
+// if true, it adds the chat tag HTML
+// if false, it just adds an empty <div> to keep layout alignment
+
+// template literals
+// allows you to embed expressions like ${person.openToChat} inside backticks (`)
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+
+// conditional ternary operator
+// the ? : syntax lets you write if/else logic inside an expression 
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator
+
 function generateAlumniCards(alumniData) {
 	const container = document.getElementById("alumni-container");
 
@@ -194,12 +209,22 @@ function generateAlumniCards(alumniData) {
 			<p>${person.program || "No Program"}, ${person.degree || "No Degree"}</p>
 			<p>👨‍⚕️ ${person.role || "N/A"}</p>
 			<p>🎨 ${person.hobby || "N/A"}</p>
+
+			// open to chat tag
+			<div class="card-footer">
+    		${person.openToChat ? `
+      		<div class="chat-tag">
+        	<img src="Asset/chat-tag.svg" alt="Chat Icon">
+        	<span>Open to chat</span>
+     		</div>
+    		` : `<div></div>`}
 			
 			<div class="card-social">
 			${person.linkedin ? `<a href="${person.linkedin}" target="_blank" class="social-icon linkedin" aria-label="LinkedIn"><img src="Asset/linkedin-icon.png" alt="LinkedIn"></a>` : ""}
 			${person.email ? `<a href="mailto:${person.email}" class="social-icon email" aria-label="Email"><img src="Asset/email-icon.webp" alt="Email"></a>` : ""}
  			${person.portfolio ? `<a href="${person.portfolio}" target="_blank" class="social-icon portfolio" aria-label="Portfolio"><img src="Asset/portfolio-icon.svg" alt="Portfolio" /></a>` : ""}
   			</div>
+			</div>
 `;
 
 		container.appendChild(card);

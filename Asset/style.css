@@ -9,8 +9,10 @@
     --background-light-red: #e65e67;
     --background-blue: #0A66C2;
     --background-light-blue: #4888c8;
+    --background-coffee-chat: #EEF0FD;
     --background-purple: #7883F9;
     --border-light-gray: #979595e1;
+    
 
     /* text color */
     --color-gray-light: #5f6368;
@@ -152,6 +154,31 @@ h2 {
 
 
 
+/* coffee chat tag */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--margin-top);
+  }
+.chat-tag {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background-color: var(--background-coffee-chat); 
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    font-family: var(--font-family-description);
+    font-size: var(--base-size);
+    color: var(--color-secondary);
+}
+.chat-tag img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+
+
 /* search engine */
 .search-box {
     margin-bottom: 1.5rem;
@@ -225,6 +252,7 @@ h2 {
     color: var(--color-red);
     border: 2px solid var(--color-red);
     transition: all 0.3s ease;
-  }
+}
+
   
   
