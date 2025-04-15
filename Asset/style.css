@@ -116,7 +116,7 @@ h2 {
 
 .card-social {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: flex-end;
     gap: 0.5rem;
     margin-top: var(--margin-top);
@@ -140,9 +140,9 @@ h2 {
 .card-footer {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     margin-top: var(--margin-top);
-  }
+}
 .chat-tag {
     display: flex;
     align-items: center;
@@ -153,6 +153,7 @@ h2 {
     font-family: var(--font-family-description);
     font-size: var(--base-size);
     color: var(--color-secondary);
+    margin-bottom: calc(0.2*var(--margin-bottom));
 }
 .chat-tag img {
     width: 1.5rem;
