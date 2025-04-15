@@ -103,15 +103,31 @@ filters.forEach(({ id, program }) => {
 
 // year filters
 // looking for a range to change on dropdown 
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select
+
+
 	document.getElementById("yearFilter").addEventListener("change", (event) => {
 		const selectedRange = event.target.value;
 		filterByYearRange(selectedRange);
 	  });
+	  
 // start of the function	  
 	  function filterByYearRange(range) {
 		let filtered;
 
-// this shows year earlier than 2019 but if not pull out the year number like 2025 under graduate
+
+//if user selects "All", show everything (reset)
+		  if (range === "all") {
+			generateAlumniCards(data); 
+			return; 
+		  }
+
+
+// if user selects "Earlier", match exact text for older grads
+// } else: otherwise, split the range like "2020-2022" → [2020, 2022]
+// const [start, end] = range.split("-").map(Number); → convert to numbers
+
+
 		if (range === "earlier") {
 		  filtered = data.filter(person => {
 			const grad = person.graduated;
