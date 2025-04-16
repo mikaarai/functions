@@ -63,43 +63,22 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 
-	// program filter 
-	// connect index.html to js
-	const filters = [
-		{ id: "btn-all", program: "ALL" },
-		{ id: "btn-cd", program: "CD" },
-		{ id: "btn-dt", program: "DT" },
-		{ id: "btn-sd", program: "SD" },
-		{ id: "btn-pd", program: "PD" }
-	];
 
-	
-	// forEach=loop; happening 5 times since i have 5 programs/filter option
-filters.forEach(({ id, program }) => {
-		// conenct to index.html
-		const button = document.getElementById(id);
+	// program filter
+	// getting the value from html
+	document.getElementById("programFilter").addEventListener("change", (event) => {
+		const selectedRange = event.target.value;	
 		
-			button.addEventListener("click", () => {
-				console.log(`🔍 Filter: ${program}`);
-
-				// remove active from all, css, when not clicked remove background color
-				filters.forEach(({ id }) => {
-					const btn = document.getElementById(id);
-					if (btn) btn.classList.remove("active");
-				});
-
-				// add active to clicked one, css, it was clicked
-				button.classList.add("active");
-
-				// apply filter, reset or show all or it will filter by program
-				if (program === "ALL") {
-					generateAlumniCards(data);
-				} else {
-					filterByProgram(program);
-				}
-			});
+		// apply filter, reset or show all or it will filter by program
+		if (selectedRange === "ALL") {
+			generateAlumniCards(data);
+		} else {
+			filterByProgram(selectedRange);
+		}
+	 	});
 	});
-});
+
+
 
 // year filters
 // looking for a range to change on dropdown 
@@ -166,6 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   });
+
   
 // open tab with google survey link for people to join the community
 // when cta-join button is clicked the link below will open on a new tab
@@ -277,5 +257,4 @@ backToTopBtn.addEventListener("click", () => {
     behavior: "smooth"
   });
 });
-
 

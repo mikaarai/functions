@@ -31,35 +31,42 @@
 	<button id="cta-join">Join</button>
 </div>
 
+
+
+<!-- sticky -->
+<div class="sticky">
+
+<!-- search engine -->
 <div class="search-box">
 	<input type="text" id="search-input" placeholder="🔍 Search by name or role">
 </div>
 
-
-
-<!-- filter program -->
-<div class="filter-buttons" id="filter-section">
-	<p>Programs</p>
-	<button id="btn-all" class="active">ALL</button>
-	<button id="btn-sd">SD</button>
-	<button id="btn-cd">CD</button>
-	<button id="btn-dt">DT</button>
-	<button id="btn-pd">PD</button>
-</div>
-
-
-
+<div class="side-by-side">
+<!-- filter programs -->
+<div class="dropdown">
+		<select id="programFilter">
+	<option value="all" selected>Program ⯆</option>
+	  <option value="all">All</option>
+	  <option value="SD">SD</option>
+	  <option value="CD">CD</option>
+	  <option value="DT">DT</option>
+	  <option value="PD">PD</option>
+	</select>
+  </div>
+  
 <!-- filter year -->
-<div class="year-dropdown">
-	<p class="dropdown-label">Graduation year</p>
+<div class="dropdown">
 	<select id="yearFilter">
-	  <option value="all" selected>All</option>
+		<option value="all" selected>Graduated ⯆</option>
+	  <option value="all">All</option>
 	  <option value="2025-2027">2025–2027</option>
 	  <option value="2022-2024">2022–2024</option>
 	  <option value="2019-2021">2019–2021</option>
 	  <option value="earlier">Before 2019</option>
 	</select>
   </div>
+</div>
+</div>
 
 
 
