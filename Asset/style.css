@@ -219,6 +219,7 @@ h2 {
     background-color: var(--background-color-primary);
     color: var(--color-red);
     border: 2px solid var(--color-red);
+    display: none;
     transition: all 0.3s ease;
 }
 

@@ -35,10 +35,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	console.log("data loaded:", data.length, "items");
 
+	
+// section: back to top; grab button element
+const backToTopBtn = document.getElementById("back-to-top");
+
+// when user scrolls down more than 300px, show the button
+// window.scrollY tells how far you’ve scrolled from the top
+// it check the value on scroll, and show the button only when the scroll is past 300px
+// https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollY
+window.addEventListener("scroll", () => {
+if (window.scrollY > 300) {
+backToTopBtn.style.display = "block";
+} else {
+backToTopBtn.style.display = "none";
+}
+});
+
+// scroll to the top smoothly when the button is clicked
+// top: scrolls to the top
+// behavior: "smooth": makes it smooth
+// https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo
+backToTopBtn.addEventListener("click", () => {
+window.scrollTo({
+top: 0,
+behavior: "smooth"
+});
+});
 
 
+	
 // display all alumni by default
-	generateAlumniCards(data);
+generateAlumniCards(data);
 
 // when tap it prompts you to go to filter
 // why i need it? so that the user know what's the first thing to do
@@ -63,20 +90,53 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 
-
-	// program filter
-	// getting the value from html
+// program filter
+// getting the value from html
 	document.getElementById("programFilter").addEventListener("change", (event) => {
 		const selectedRange = event.target.value;	
 		
 		// apply filter, reset or show all or it will filter by program
-		if (selectedRange === "ALL") {
+		if (selectedRange === "all") {
 			generateAlumniCards(data);
 		} else {
 			filterByProgram(selectedRange);
 		}
 	 	});
+
+
+// open tab with google survey link for people to join the community
+// when cta-join button is clicked the link below will open on a new tab
+// https://developer.mozilla.org/en-US/docs/Web/API/Window/open
+const joinBtn = document.getElementById("cta-join");
+if (joinBtn) {
+	joinBtn.addEventListener("click", () => {
+		window.open(
+			"https://docs.google.com/forms/d/e/1FAIpQLSdl-8kdkWzOacSq8_vS71pQwdvuvJLnnKCd-qklQf1pw_7Q9g/viewform",
+			"_blank"
+		);
 	});
+}
+
+
+
+// search engine by name or role 
+// user can easily search by name or role depending on their goal
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input?utm_source=chatgpt.com
+const searchInput = document.getElementById("search-input");
+
+if (searchInput) {
+  searchInput.addEventListener("input", () => {
+	const searchTerm = searchInput.value.toLowerCase();
+
+	const filteredResults = data.filter(person => {
+	  const nameMatch = person.fullName && person.fullName.toLowerCase().includes(searchTerm);
+	  const roleMatch = person.role && person.role.toLowerCase().includes(searchTerm);
+	  return nameMatch || roleMatch;
+	});
+
+	generateAlumniCards(filteredResults);
+  });
+}
 
 
 
@@ -85,21 +145,25 @@ document.addEventListener("DOMContentLoaded", () => {
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select
 
 
-	document.getElementById("yearFilter").addEventListener("change", (event) => {
-		const selectedRange = event.target.value;
-		filterByYearRange(selectedRange);
-	  });
+document.getElementById("yearFilter").addEventListener("change", (event) => {
+	const selectedRange = event.target.value;
+	filterByYearRange(selectedRange);
+  });
+
+
+});
+
 
 // start of the function	  
-	  function filterByYearRange(range) {
-		let filtered;
+  function filterByYearRange(range) {
+	let filtered;
 
 
 //if user selects "All", show everything (reset)
-		  if (range === "all") {
-			generateAlumniCards(data); 
-			return; 
-		  }
+	  if (range === "all") {
+		generateAlumniCards(data); 
+		return; 
+	  }
 
 
 // if user selects "Earlier", match exact text for older grads
@@ -107,66 +171,28 @@ document.addEventListener("DOMContentLoaded", () => {
 // const [start, end] = range.split("-").map(Number); → convert to numbers
 
 
-		if (range === "earlier") {
-		  filtered = data.filter(person => {
-			const grad = person.graduated;
-			return grad === "2019" || grad === "Earlier than 2018";
-		  });
-		} else {
-		  const [start, end] = range.split("-").map(Number);
-		  filtered = data.filter(person => {
-			const year = parseInt(person.graduated);
-			return !isNaN(year) && year >= start && year <= end;
-		  });
-		}
-	//   result
-		generateAlumniCards(filtered);
-	  }	  
-	  
-  
-
-// search engine by name or role 
-// user can easily search by name or role depending on their goal
-// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input?utm_source=chatgpt.com
-document.addEventListener("DOMContentLoaded", () => {
-    const searchInput = document.getElementById("search-input");
-  
-    if (searchInput) {
-      searchInput.addEventListener("input", () => {
-        const searchTerm = searchInput.value.toLowerCase();
-  
-        const filteredResults = data.filter(person => {
-          const nameMatch = person.fullName && person.fullName.toLowerCase().includes(searchTerm);
-          const roleMatch = person.role && person.role.toLowerCase().includes(searchTerm);
-          return nameMatch || roleMatch;
-        });
-  
-        generateAlumniCards(filteredResults);
-      });
-    }
-  });
-
-  
-// open tab with google survey link for people to join the community
-// when cta-join button is clicked the link below will open on a new tab
-// https://developer.mozilla.org/en-US/docs/Web/API/Window/open
-  document.addEventListener("DOMContentLoaded", () => {
-	const joinBtn = document.getElementById("cta-join");
-	if (joinBtn) {
-		joinBtn.addEventListener("click", () => {
-			window.open(
-				"https://docs.google.com/forms/d/e/1FAIpQLSdl-8kdkWzOacSq8_vS71pQwdvuvJLnnKCd-qklQf1pw_7Q9g/viewform",
-				"_blank"
-			);
-		});
+	if (range === "earlier") {
+	  filtered = data.filter(person => {
+		const grad = person.graduated;
+		return grad === "2019" || grad === "Earlier than 2018";
+	  });
+	} else {
+	  const [start, end] = range.split("-").map(Number);
+	  filtered = data.filter(person => {
+		const year = parseInt(person.graduated);
+		return !isNaN(year) && year >= start && year <= end;
+	  });
 	}
-});
+//   result
+	generateAlumniCards(filtered);
+  }	  
+  
 
 
 // filter by program 
 function filterByProgram(program) {
-	const filteredData = data.filter(person => person.program === program);
-	generateAlumniCards(filteredData);
+const filteredData = data.filter(person => person.program === program);
+generateAlumniCards(filteredData);
 }
 
 // generate cards 
@@ -190,71 +216,48 @@ function filterByProgram(program) {
 
 
 function generateAlumniCards(alumniData) {
-	const container = document.getElementById("alumni-container");
+const container = document.getElementById("alumni-container");
 
-	if (!container) {
-		console.error("Alumni container not found.");
-		return;
-	}
+if (!container) {
+	console.error("Alumni container not found.");
+	return;
+}
 
-	container.innerHTML = "";
-	console.log(`Rendering ${alumniData.length} cards`);
+container.innerHTML = "";
+console.log(`Rendering ${alumniData.length} cards`);
 
-	alumniData.forEach(person => {
-		const card = document.createElement("div");
-		card.className = "card";
+alumniData.forEach(person => {
+	const card = document.createElement("div");
+	card.className = "card";
 
-		card.innerHTML = `
-			<h3>${person.fullName || "No Name"}</h3>
-			<p>${person.program || "No Program"}, ${person.degree || "No Degree"}</p>
-			<p>🎓 ${person.graduated || "N/A"}</p>
-			<p>👨‍⚕️ ${person.role || "N/A"}</p>
-			<p>🎨 ${person.hobby || "N/A"}</p>
-			
-			<div class="card-footer">
-    		${person.openToChat ? `
-      		<div class="chat-tag">
-        	<img src="Asset/chat-tag.svg" alt="Chat Icon">
-        	<span>Open to chat</span>
-     		</div>
-    		` : `<div></div>`}
-			
-			<div class="card-social">
-			${person.linkedin ? `<a href="${person.linkedin}" target="_blank" class="social-icon linkedin" aria-label="LinkedIn"><img src="Asset/linkedin-icon.svg" alt="LinkedIn"></a>` : ""}
-			${person.email ? `<a href="mailto:${person.email}" class="social-icon email" aria-label="Email"><img src="Asset/email-icon.svg" alt="Email"></a>` : ""}
- 			${person.portfolio ? `<a href="${person.portfolio}" target="_blank" class="social-icon portfolio" aria-label="Portfolio"><img src="Asset/portfolio-icon.svg" alt="Portfolio" /></a>` : ""}
-  			</div>
-			</div>
+	card.innerHTML = `
+		<h3>${person.fullName || "No Name"}</h3>
+		<p>${person.program || "No Program"}, ${person.degree || "No Degree"}</p>
+		<p>🎓 ${person.graduated || "N/A"}</p>
+		<p>👨‍⚕️ ${person.role || "N/A"}</p>
+		<p>🎨 ${person.hobby || "N/A"}</p>
+		
+		<div class="card-footer">
+		${person.openToChat ? `
+		  <div class="chat-tag">
+		<img src="Asset/chat-tag.svg" alt="Chat Icon">
+		<span>Open to chat</span>
+		 </div>
+		` : `<div></div>`}
+		
+		<div class="card-social">
+		${person.linkedin ? `<a href="${person.linkedin}" target="_blank" class="social-icon linkedin" aria-label="LinkedIn"><img src="Asset/linkedin-icon.svg" alt="LinkedIn"></a>` : ""}
+		${person.email ? `<a href="mailto:${person.email}" class="social-icon email" aria-label="Email"><img src="Asset/email-icon.svg" alt="Email"></a>` : ""}
+		 ${person.portfolio ? `<a href="${person.portfolio}" target="_blank" class="social-icon portfolio" aria-label="Portfolio"><img src="Asset/portfolio-icon.svg" alt="Portfolio" /></a>` : ""}
+		  </div>
+		</div>
 `;
 
-		container.appendChild(card);
-	});
+	container.appendChild(card);
+});
 }
 
 
-// section: back to top; grab button element
-const backToTopBtn = document.getElementById("back-to-top");
 
-// when user scrolls down more than 300px, show the button
-// window.scrollY tells how far you’ve scrolled from the top
-// it check the value on scroll, and show the button only when the scroll is past 300px
-// https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollY
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    backToTopBtn.style.display = "block";
-  } else {
-    backToTopBtn.style.display = "none";
-  }
-});
 
-// scroll to the top smoothly when the button is clicked
-// top: scrolls to the top
-// behavior: "smooth": makes it smooth
-// https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo
-backToTopBtn.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-});
 

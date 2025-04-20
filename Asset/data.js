@@ -76,18 +76,6 @@ let data = [
         "hobby": "Going to see galleries, Walking around the city, Going to a bookstore"
     },
     {
-        "fullName": "Emma de Suyrot",
-        "email": "emmasuyrot@gmail.com",
-        "program": "CD",
-        "degree": "Master's",
-        "role": "Students",
-        "graduated": "2025",
-        "linkedin": "https://www.linkedin.com/in/emmadesuyrot/",
-        "company": "N/A",
-        "portfolio": "https://readymag.website/5250755",
-        "hobby": "Padel Tennis, Footy (Soccer), Doodling, Crochet, Running"
-    },
-    {
         "fullName": "Nadia Batchelor",
         "email": "batcn896@newschool.edu",
         "program": "CD",
@@ -120,7 +108,7 @@ let data = [
         "graduated": "2025",
         "linkedin": "https://www.linkedin.com/in/nattakitta-chuasiriphattana",
         "company": "N/A",
-        "portfolio": "opalnattakitta.framer.website",
+        "portfolio": "https://opalnattakitta.framer.website",
         "hobby": "Cooking",
         openToChat: true,
     },
@@ -181,7 +169,7 @@ let data = [
         "graduated": "2025",
         "linkedin": "https://www.linkedin.com/in/veemai",
         "company": "N/A",
-        "portfolio": "Vee-mai.com",
+        "portfolio": "https://Vee-mai.com",
         "hobby": "Cooking, Watching Kdrama, Gym"
     },
     {
@@ -205,7 +193,7 @@ let data = [
         "graduated": "2025",
         "linkedin": "linkedin.com/in/rice-gallardo",
         "company": "N/A",
-        "portfolio": "www.ricegallardo.xyz",
+        "portfolio": "https://ricegallardo.xyz",
         "hobby": "risograph printing, drawing, playing video games, watching movies"
     },
     {
@@ -217,7 +205,7 @@ let data = [
         "graduated": "2025",
         "linkedin": "http://www.linkedin.com/in/tawny-shu-a4233b269",
         "company": "N/A",
-        "portfolio": "www.tawnyshu.com",
+        "portfolio": "https://tawnyshu.com",
         "hobby": "Knitting, crochet, sewing. Fiber arts :) check out my Instagram: @wontawn.crochets"
     },
     {
@@ -241,7 +229,7 @@ let data = [
         "graduated": "2023",
         "linkedin": "https://www.linkedin.com/in/hamzaiqbaldesign",
         "company": "Nappr.io",
-        "portfolio": "Hamzaiqbal.com",
+        "portfolio": "https://Hamzaiqbal.com",
         "hobby": "Park Slope Food Coop for fun, friends, groceries, everything"
     },
     {
@@ -341,7 +329,7 @@ let data = [
         "graduated": "2022",
         "linkedin": "https://www.linkedin.com/in/giordana-pulpo",
         "company": "Abstractive Health",
-        "portfolio": "GiordanaPulpo.com",
+        "portfolio": "https://GiordanaPulpo.com",
         "hobby": "Travelling, try new restaurants, hiking, photography, reading",
         openToChat: true,
     },
@@ -440,7 +428,7 @@ let data = [
         "graduated": "2025",
         "linkedin": "www.linkedin.com/in/jaynachoksi",
         "company": "",
-        "portfolio": "jaynachoksi.com",
+        "portfolio": "https://jaynachoksi.com",
         "hobby": "Cooking and Football!",
         openToChat: true,
     }
