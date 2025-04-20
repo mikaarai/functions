@@ -96,6 +96,7 @@ h2 {
 /* card */
 .card {
     margin-bottom: var(--margin-top);
+    margin-top: var(--margin-top);
     padding: var(--padding-top);
     border: 1px solid var(--border-light-gray);
 }
@@ -164,9 +165,9 @@ h2 {
 /* search engine */
 .search-box {
     transition: all 0.2s ease;
-    margin-top: calc(2*var(--margin-top));
 }
 .search-box input {
+    margin-top: calc(.5*var(--margin-top));
     padding: 1em 1em;
     width: 100%;
     max-width: 400px;
