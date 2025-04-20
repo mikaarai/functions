@@ -139,12 +139,12 @@ h2 {
 
 /* coffee chat tag */
 .card-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    /* display: flex; */
+    /* justify-content: column;
+    align-items: flex-end; */
 }
 .chat-tag {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 0.4rem;
     background-color: var(--background-coffee-chat); 
