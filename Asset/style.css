@@ -198,16 +198,16 @@ h2 {
     margin-bottom: calc(0.5*var(--margin-bottom));
     font-family: var(--font-family-description);
     color: var(--color-gray-light);
-    position: relative;
+    /* position: relative;
     display: inline-block;
-    width: fit-content;
+    width: fit-content; */
 }
 .dropdown select {
     font-size: var(--base-size);
     padding: 0.5em;
     border: 1px solid var(--border-light-gray);
-    border-radius: 0; 
-    /* removes default arrow */
+    /* border-radius: 0;  */
+    /* removes default arrow
     appearance: none; 
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -218,18 +218,7 @@ h2 {
     font-size: var(--base-size);
     border: 1px solid var(--border-light-gray);
     color: var(--color-gray-light); 
-    box-sizing: border-box;
-  }
-  .select-arrow {
-    position: absolute;
-    right: 1rem;
-    /* center height */
-    top: 50%;
-    transform: translateY(-50%);
-    /* when click it, action only allows to show selection. nothing else */
-    pointer-events: none; 
-    width: 1.5rem;
-    height: 1.5rem;
+    box-sizing: border-box; */
   }
 
 
