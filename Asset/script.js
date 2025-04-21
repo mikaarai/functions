@@ -151,7 +151,21 @@ document.getElementById("yearFilter").addEventListener("change", (event) => {
   });
 
 
-  
+// open to...filter
+// this listens for a change event on the dropdown. when you select new option (like “Work” or “Mentor”), it calls the applyAllFilters() function to update the results
+	  document.getElementById("openToFilter").addEventListener("change", (event) => {
+		const selected = event.target.value;
+	  
+		if (selected === "all") {
+		  generateAlumniCards(data);
+		} else {
+		  const filtered = data.filter(person => person[selected] === true);
+		  generateAlumniCards(filtered);
+		}
+	  });
+
+
+
 // footer
   const footerJoinBtn = document.getElementById("footer-cta");
   if (footerJoinBtn) {
@@ -195,6 +209,9 @@ document.getElementById("yearFilter").addEventListener("change", (event) => {
 		return !isNaN(year) && year >= start && year <= end;
 	  });
 	}
+
+
+
 //   result
 	generateAlumniCards(filtered);
   }	  

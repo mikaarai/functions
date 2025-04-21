@@ -199,13 +199,24 @@ h2 {
     font-family: var(--font-family-description);
     color: var(--color-gray-light);
 }
-
 .dropdown select {
     font-size: var(--base-size);
     padding: 0.5em 1em;
     border: 1px solid var(--border-light-gray);
     border-radius: 0; 
   }
+
+
+
+/* reset
+.reset-button {
+    font-family: var(--font-family-description);
+    font-size: var(--base-size);
+    padding: 0.5em 1.2em;
+    border: 1px solid var(--border-light-gray);
+    background-color: white;
+    color: var(--color-gray-light);
+} */
 
 
 
