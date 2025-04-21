@@ -203,24 +203,10 @@ h2 {
     width: fit-content; */
 }
 .dropdown select {
-    font-size: var(--base-size);
+    font-size: (--base-size);
     padding: 0.5em;
     border: 1px solid var(--border-light-gray);
-    /* border-radius: 0;  */
-    /* removes default arrow
-    appearance: none; 
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    width: 100%;
-    padding-right: 2rem;
-    background-color: var(--background-color-primary);
-    font-family: var(--font-family-description);
-    font-size: var(--base-size);
-    border: 1px solid var(--border-light-gray);
-    color: var(--color-gray-light); 
-    box-sizing: border-box; */
-  }
-
+}
 
 /* reset
 .reset-button {
