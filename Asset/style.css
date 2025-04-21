@@ -98,14 +98,26 @@ h2 {
     margin-bottom: var(--margin-top);
     margin-top: var(--margin-top);
     padding: var(--padding-top);
-    border: 1px solid var(--border-light-gray);
+    border: 1px solid rgb(226, 225, 225);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    /* shadow */
+    /* adding depth to the cards and providing breathing room between cards for readability */
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
 }
 .card h3 {
-    /* margin: 0; */
     font-family: var(--font-family-description);
     font-size: calc(2*var(--base-size));
+    font-weight: 500;
     margin-bottom: calc(0.5*var(--margin-bottom));
     margin-top: calc(0.5*var(--margin-top));
+}
+.card h4 {
+    font-family: var(--font-family-description);
+    font-size: calc(1*var(--base-size));
+    /* font-weight: 500; */
+    color: var(--border-light-gray);
+    /* margin-bottom: calc(0.5*var(--margin-bottom)); */
+    /* margin-top: calc(0.5*var(--margin-top)); */
 }
 .card p {
     margin: 4px 0;
@@ -125,11 +137,15 @@ h2 {
     font-family: var(--font-family-description);
     font-size: var(--base-size);
     color: var(--color-gray-light);
-  }
+}
 .card-social .social-icon {
-    width: 2.5rem;
-    height: 2.5rem;
-    background-color: var(--color-red);
+    width: 2.7rem;
+    height: 2.7rem;
+    background-color: var(--background-color-primary);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgb(226, 225, 225);
+    border-radius: 999px;
+    padding: 0.4rem;
 }
 .card-social .social-icon img {
     width: 100%;
