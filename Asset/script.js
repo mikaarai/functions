@@ -231,14 +231,17 @@ alumniData.forEach(person => {
 	card.className = "card";
 
 	card.innerHTML = `
-	<div class="card-footer">
-	${person.openToChat ? `
-	  <div class="chat-tag">
-	<img src="Asset/chat-tag.svg" alt="Chat Icon">
-	<span>Open to chat</span>
-	 </div>
-	` : `<div></div>`}
-	
+	<div class="chat-tag">
+ 	${person.openToChat ? `
+      <div class="chat-tag"><img src="Asset/chat-tag.svg"><span>Open to chat</span></div>` : ""}
+    ${person.openToWork ? `
+      <div class="chat-tag"><img src="Asset/work-tag.svg"><span>Open to work</span></div>` : ""}
+    ${person.openToMentor ? `
+      <div class="chat-tag"><img src="Asset/mentor-tag.svg"><span>Open to mentor</span></div>` : ""}
+    ${person.hiring ? `
+      <div class="chat-tag"><img src="Asset/hiring-tag.svg"><span>Hiring</span></div>` : ""}
+  </div>
+
 		<h3>${person.fullName || "No Name"}</h3>
 		<p>${person.program || "No Program"}, ${person.degree || "No Degree"}</p>
 		<p>🎓 ${person.graduated || "N/A"}</p>

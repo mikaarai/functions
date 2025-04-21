@@ -101,16 +101,17 @@ h2 {
     border: 1px solid var(--border-light-gray);
 }
 .card h3 {
-    margin: 0;
+    /* margin: 0; */
     font-family: var(--font-family-description);
     font-size: calc(2*var(--base-size));
     margin-bottom: calc(0.5*var(--margin-bottom));
+    margin-top: calc(0.5*var(--margin-top));
 }
 .card p {
     margin: 4px 0;
     font-family: var(--font-family-description);
     font-size: var(--base-size);
-    color: var(--color-gray-light);
+    color: calc(0.5*var(--color-gray-light));
 }
 
 
@@ -137,23 +138,17 @@ h2 {
 
 
 
-/* coffee chat tag */
-.card-footer {
-    /* display: flex; */
-    /* justify-content: column;
-    align-items: flex-end; */
-}
+/* coffee chat tag */  
 .chat-tag {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
     background-color: var(--background-coffee-chat); 
-    padding: 0.3rem 0.8rem;
+    padding: 0.1rem 0.4rem;
     border-radius: 999px;
     font-family: var(--font-family-description);
     font-size: var(--base-size);
     color: var(--color-secondary);
-    margin-bottom: calc(0.2*var(--margin-bottom));
 }
 .chat-tag img {
     width: 1.5rem;

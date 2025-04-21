@@ -11,7 +11,7 @@ let data = [
         "company": "N/A",
         "portfolio": "https://mikaarai.com",
         "hobby": "Speakeasy & food",
-        openToChat: true,
+        openToWork: true,
     },
     {
         "fullName": "Inji Mammadli",
@@ -23,7 +23,8 @@ let data = [
         "linkedin": "https://www.linkedin.com/in/inji-mammadli-3b7b71168/",
         "company": "N/A",
         "portfolio": "https://injimammadli.com/portfolio",
-        "hobby": "Gaming"
+        "hobby": "Gaming",
+        openToWork: true,
     },
     {
         "fullName": "Devansh Khajanchi",
@@ -36,7 +37,7 @@ let data = [
         "company": "",
         "portfolio": "https://www.devanshkhajanchi.com/",
         "hobby": "Specialty Coffee",
-        openToChat: true,
+        openToWork: true,
     },
     {
         "fullName": "Iris Chang",
@@ -48,7 +49,8 @@ let data = [
         "linkedin": "https://www.linkedin.com/in/iirischang",
         "company": "N/A",
         "portfolio": "",
-        "hobby": "swimming, photography"
+        "hobby": "swimming, photography",
+        openToWork: true,
     },
     {
         "fullName": "Bhakti Garach",
@@ -61,7 +63,7 @@ let data = [
         "company": "",
         "portfolio": "https://bhaktigarach.com/",
         "hobby": "Cooking, Hiking, Travel",
-        openToChat: true,
+        openToWork: true,
     },
     {
         "fullName": "Jaehyun Ahn (Irene)",
@@ -73,7 +75,8 @@ let data = [
         "linkedin": "https://www.linkedin.com/in/irene-jh-ahn",
         "company": "N/A",
         "portfolio": "",
-        "hobby": "Going to see galleries, Walking around the city, Going to a bookstore"
+        "hobby": "Going to see galleries, Walking around the city, Going to a bookstore",
+        openToWork: true,
     },
     {
         "fullName": "Nadia Batchelor",
@@ -97,20 +100,8 @@ let data = [
         "linkedin": "www.linkedin.com/in/ziwei-xing",
         "company": "N/A",
         "portfolio": "https://ziweixing97.github.io/Portfolio/index.html",
-        "hobby": "Listen to music, watch drama TV show, play game"
-    },
-    {
-        "fullName": "Nattakitta Chuasiriphattana",
-        "email": "nattakitta.chuasiriphattana@gmail.com",
-        "program": "CD",
-        "degree": "Master's",
-        "role": "Students",
-        "graduated": "2025",
-        "linkedin": "https://www.linkedin.com/in/nattakitta-chuasiriphattana",
-        "company": "N/A",
-        "portfolio": "https://opalnattakitta.framer.website",
-        "hobby": "Cooking",
-        openToChat: true,
+        "hobby": "Listen to music, watch drama TV show, play game",
+        openToWork: true,
     },
     {
         "fullName": "Amy Lewis",
@@ -122,7 +113,8 @@ let data = [
         "linkedin": "https://www.linkedin.com/in/amy-lewis15/",
         "company": "N/A",
         "portfolio": "https://www.amy-lewis.com/",
-        "hobby": "Running/Soccer"
+        "hobby": "Running/Soccer",
+        openToWork: true,
     },
     {
         "fullName": "Joshua Estrella",
@@ -134,7 +126,8 @@ let data = [
         "linkedin": "https://linkedin.com/in/joshuaestrella",
         "company": "Instrument",
         "portfolio": "",
-        "hobby": "Being a silly goose"
+        "hobby": "Being a silly goose",
+        openToMentor: true,
     },
     {
         "fullName": "Ishani Koul",
@@ -146,7 +139,8 @@ let data = [
         "linkedin": "https://www.linkedin.com/in/ishani-koul/",
         "company": "N/A",
         "portfolio": "https://ishanikoul.framer.website/",
-        "hobby": "Cooking + Eating, Hiking"
+        "hobby": "Cooking + Eating, Hiking",
+        openToWork: true,
     },
     {
         "fullName": "Jonathan Chiang",
@@ -158,7 +152,8 @@ let data = [
         "linkedin": "https://www.linkedin.com/in/jmchiang5/",
         "company": "N/A",
         "portfolio": "https://jonathanchiang.com/",
-        "hobby": "Badminton, Pickleball, Tennis, Dogs"
+        "hobby": "Badminton, Pickleball, Tennis, Dogs",
+        openToWork: true,
     },
     {
         "fullName": "Vy Mai (Vee)",
@@ -170,7 +165,8 @@ let data = [
         "linkedin": "https://www.linkedin.com/in/veemai",
         "company": "N/A",
         "portfolio": "https://Vee-mai.com",
-        "hobby": "Cooking, Watching Kdrama, Gym"
+        "hobby": "Cooking, Watching Kdrama, Gym",
+        openToWork: true,
     },
     {
         "fullName": "Yuting Zhuang",
@@ -182,7 +178,8 @@ let data = [
         "linkedin": "https://www.linkedin.com/in/yuting-zhuang/",
         "company": "N/A",
         "portfolio": "https://www.yutingzhuang.com/",
-        "hobby": "Dancing!"
+        "hobby": "Dancing!",
+        openToWork: true,
     },
     {
         "fullName": "Rice Gallardo",
@@ -194,7 +191,8 @@ let data = [
         "linkedin": "linkedin.com/in/rice-gallardo",
         "company": "N/A",
         "portfolio": "https://ricegallardo.xyz",
-        "hobby": "risograph printing, drawing, playing video games, watching movies"
+        "hobby": "risograph printing, drawing, playing video games, watching movies",
+        openToWork: true,
     },
     {
         "fullName": "Tawny Shu",
@@ -206,7 +204,7 @@ let data = [
         "linkedin": "http://www.linkedin.com/in/tawny-shu-a4233b269",
         "company": "N/A",
         "portfolio": "https://tawnyshu.com",
-        "hobby": "Knitting, crochet, sewing. Fiber arts :) check out my Instagram: @wontawn.crochets"
+        "hobby": "Knitting, crochet, sewing. Fiber arts :) check out my Instagram: @wontawn.crochets",
     },
     {
         "fullName": "Mark Huang",
@@ -218,7 +216,8 @@ let data = [
         "linkedin": "https://www.linkedin.com/in/thismark?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
         "company": "Meta",
         "portfolio": "",
-        "hobby": "Cats, cars and coffee"
+        "hobby": "Cats, cars and coffee",
+        hiring: true,
     },
     {
         "fullName": "Hamza Iqbal",
@@ -242,7 +241,8 @@ let data = [
         "linkedin": "https://www.linkedin.com/in/nattakitta-chuasiriphattana",
         "company": "",
         "portfolio": "https://opalnattakitta.framer.website/",
-        "hobby": "Cooking!"
+        "hobby": "Cooking!",
+        openToWork: true,
     },
     {
         "fullName": "Isaiah Minor",
@@ -254,7 +254,8 @@ let data = [
         "linkedin": "https://www.linkedin.com/in/isaiahminor/",
         "company": "Visa Inc.",
         "portfolio": "N/A",
-        "hobby": "Exercising, cycling, walking and discovering novel experiences, and trying different types of food."
+        "hobby": "Exercising, cycling, walking and discovering novel experiences, and trying different types of food.",
+        openToMentor: true,
     },
     {
         "fullName": "Yeo-Kyeong Chung",
@@ -267,7 +268,7 @@ let data = [
         "company": "S&P Global",
         "portfolio": "",
         "hobby": "Dancing, cooking, art stuff(drawing, painting)",
-        openToChat: true,
+        hiring: true,
     },
     {
         "fullName": "Yash Sonwaney",
@@ -305,7 +306,6 @@ let data = [
         "company": "n/a",
         "portfolio": "https://sethlukin.com/",
         "hobby": "",
-        openToChat: true,
     },
     {
         "fullName": "Andre Magracia",
@@ -355,7 +355,8 @@ let data = [
         "linkedin": "linkedin.com/in/jenny-yen-99648820b",
         "company": "N/A",
         "portfolio": "https://jennyenn.com",
-        "hobby": "Making coffee and matcha, taking a random walk"
+        "hobby": "Making coffee and matcha, taking a random walk",
+        openToWork: true,
     },
     {
         "fullName": "Shambhavi Varma",
@@ -367,7 +368,8 @@ let data = [
         "linkedin": "https://www.linkedin.com/in/shambhavivarma08/",
         "company": "",
         "portfolio": "https://shamv.framer.website/",
-        "hobby": "Sketching, critiquing music and watching movies"
+        "hobby": "Sketching, critiquing music and watching movies",
+        openToWork: true,
     },
     {
         "fullName": "Emma de Suyrot",
@@ -404,7 +406,8 @@ let data = [
         "linkedin": "https://www.linkedin.com/in/jolyntran/",
         "company": "N/A",
         "portfolio": "https://jolyntran.com/",
-        "hobby": "Matcha, baking, playing cozy games, ceramics"
+        "hobby": "Matcha, baking, playing cozy games, ceramics",
+        openToWork: true,
     },
     {
         "fullName": "Simran Kaur Pabla",
@@ -417,7 +420,7 @@ let data = [
         "company": "American Express",
         "portfolio": "",
         "hobby": "legos, reading, working out, cooking",
-        openToChat: true,
+        openToMentor: true,
     },
     {
         "fullName": "Jayna Choksi",
