@@ -151,6 +151,18 @@ document.getElementById("yearFilter").addEventListener("change", (event) => {
   });
 
 
+  
+// footer
+  const footerJoinBtn = document.getElementById("footer-cta");
+  if (footerJoinBtn) {
+	footerJoinBtn.addEventListener("click", () => {
+	  window.open(
+		"https://docs.google.com/forms/d/e/1FAIpQLSdl-8kdkWzOacSq8_vS71pQwdvuvJLnnKCd-qklQf1pw_7Q9g/viewform",
+		"_blank"
+	  );
+	});
+  }
+
 });
 
 
