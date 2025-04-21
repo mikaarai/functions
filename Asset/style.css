@@ -95,9 +95,12 @@ h2 {
 
 /* card */
 .card {
-    margin-bottom: var(--margin-top);
-    margin-top: var(--margin-top);
-    padding: var(--padding-top);
+    margin-bottom: calc(1.5*var(--margin-bottom));
+    margin-top: calc(1.5*var(--margin-top));
+    padding-top: calc(1.5*var(--padding-top));
+    padding-bottom: calc(1.5*var(--padding-top));
+    padding-right: var(--padding-top);
+    padding-left: var(--padding-top);
     border: 1px solid rgb(226, 225, 225);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     /* shadow */
@@ -114,16 +117,15 @@ h2 {
 .card h4 {
     font-family: var(--font-family-description);
     font-size: calc(1*var(--base-size));
-    /* font-weight: 500; */
-    color: var(--border-light-gray);
-    /* margin-bottom: calc(0.5*var(--margin-bottom)); */
-    /* margin-top: calc(0.5*var(--margin-top)); */
+    font-weight: 500;
+    color: var(--color-gray-light);
 }
 .card p {
     margin: 4px 0;
     font-family: var(--font-family-description);
     font-size: var(--base-size);
-    color: calc(0.5*var(--color-gray-light));
+    color: var(--color-gray-light);
+    font-weight: 300;
 }
 
 
@@ -163,8 +165,8 @@ h2 {
     padding: 0.1rem 0.4rem;
     border-radius: 999px;
     font-family: var(--font-family-description);
-    font-size: var(--base-size);
-    color: var(--color-secondary);
+    font-size: calc(0.9*var(--base-size));
+    color: var(--color-gray-light);
 }
 .chat-tag img {
     width: 1.5rem;
