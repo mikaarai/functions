@@ -27,7 +27,7 @@ const passwordError = document.getElementById("password-error");
 passwordSubmit.addEventListener("click", () => {
 
 	// checks if the value/password type is correct
-  if (passwordInput.value === "parsonsexclusive") {
+  if (passwordInput.value === "helloparsons") {
 
 	// hides password
     passwordScreen.style.display = "none";
