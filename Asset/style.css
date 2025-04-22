@@ -105,7 +105,7 @@ h2 {
     height: 300px;
     object-fit: cover;
     margin: 0 auto;
-    padding-bottom: calc(4*var(--padding-bottom));
+    padding-bottom: calc(7*var(--padding-bottom));
   }
 
 
