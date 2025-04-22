@@ -155,15 +155,13 @@ h2 {
 
 /* image */
 .parsonstudents {
-    /* margin-left: -1rem;
-    margin-right: -1rem;
-    margin-bottom: calc(3*var(--margin-top)); */
     display: block;
     width: 100vw; 
     height: 300px;
     object-fit: cover;
     margin: 0 auto;
     padding-bottom: calc(4*var(--padding-bottom));
+    max-width: 100%;
   }
 
 
@@ -259,7 +257,7 @@ h2 {
     padding: 1em 1em;
     width: 100%;
     max-width: 400px;
-    font-size: 1rem;
+    font-size: var(--base-size);
     border: 1px solid #979595e1;
     font-family: var(--font-family-description);
     color: var(--color-gray-light);
@@ -278,7 +276,7 @@ h2 {
     width: fit-content; */
 }
 .dropdown select {
-    font-size: (--base-size);
+    font-size: var(--base-size);
     padding: 0.5em;
     border: 1px solid var(--border-light-gray);
 }
@@ -343,5 +341,4 @@ h2 {
     color: var(--color-gray-light);
     margin-top: calc(3*var(--margin-top));
 }
-  
   
