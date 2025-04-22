@@ -44,7 +44,7 @@ const backToTopBtn = document.getElementById("back-to-top");
 // it check the value on scroll, and show the button only when the scroll is past 300px
 // https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollY
 window.addEventListener("scroll", () => {
-if (window.scrollY > 300) {
+if (window.scrollY > 1000) {
 backToTopBtn.style.display = "block";
 } else {
 backToTopBtn.style.display = "none";

@@ -95,12 +95,9 @@ h2 {
 
 /* image */
 .parsonstudents {
-    margin-right: -1rem;
     margin-left: -1rem;
-    display: block;
-    transform: scale(1.5); 
-    transform-origin: center;
-}
+    margin-right: -1rem;
+  }
 
 
 
