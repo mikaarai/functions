@@ -14,6 +14,32 @@
 document.addEventListener("DOMContentLoaded", () => {
 	console.log("DOM fully loaded.");
 
+
+
+// password screen
+// grab the html element and hides it once password is type
+const passwordScreen = document.getElementById("password-screen");
+const passwordInput = document.getElementById("password-input");
+const passwordSubmit = document.getElementById("password-submit");
+const passwordError = document.getElementById("password-error");
+
+// waiting for it to click then runs the function
+passwordSubmit.addEventListener("click", () => {
+
+	// checks if the value/password type is correct
+  if (passwordInput.value === "parsonsexclusive") {
+
+	// hides password
+    passwordScreen.style.display = "none";
+
+	// if password is wrong, it shows error message
+  } else {
+    passwordError.style.display = "block";
+  }
+});
+
+
+
 // safety check to make sure data.js file was loaded correctly
 // not loaded → error message 
 // loaded → proceeds with the rest of my code

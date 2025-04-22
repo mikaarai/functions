@@ -40,6 +40,32 @@
 
 
 
+/* password */
+#password-screen {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#password-screen h1 {
+    margin-top: var(--margin-top);
+    margin-bottom: var(--margin-top);
+    font-size: calc(3*var(--base-size));
+    font-family: var(--font-family-h1);
+}
+#password-screen h2 {
+    margin-bottom: var(--margin-top);
+}
+
+
+
+
 /* heading */
 body {
     width: 100%;
@@ -105,7 +131,7 @@ h2 {
     height: 300px;
     object-fit: cover;
     margin: 0 auto;
-    padding-bottom: calc(7*var(--padding-bottom));
+    padding-bottom: calc(4*var(--padding-bottom));
   }
 
 
