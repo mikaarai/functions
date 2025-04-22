@@ -71,7 +71,7 @@ h2 {
 #cta-explore {
     font-family: var(--font-family-description);
     font-size: var(--base-size);
-    margin-bottom: calc(7 * var(--margin-top));
+    margin-bottom: calc(3*var(--margin-top));
     border: 1px solid var(--color-red);
     padding: 1em 2em;
     font-weight: 600;
@@ -83,7 +83,7 @@ h2 {
 #cta-join {
     font-family: var(--font-family-description);
     font-size: var(--base-size);
-    margin-bottom: calc(7*var(--margin-top));
+    margin-bottom: calc(3*var(--margin-top));
     border: 1px solid var(--color-red);
     color: var(--color-red);    
     padding: 1em 2em;
@@ -97,6 +97,7 @@ h2 {
 .parsonstudents {
     margin-left: -1rem;
     margin-right: -1rem;
+    margin-bottom: calc(3*var(--margin-top));
   }
 
 
