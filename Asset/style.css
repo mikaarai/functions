@@ -214,13 +214,14 @@ h2 {
     color: var(--color-gray-light);
 }
 .card-social .social-icon {
-    width: 2.7rem;
-    height: 2.7rem;
-    background-color: var(--background-color-primary);
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: #F1F2F2;
+    /* background-color: var(--background-color-primary); */
     /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
     /* border: 1px solid rgb(226, 225, 225); */
     border-radius: 999px;
-    padding: 0.4rem;
+    padding: 0.8rem;
 }
 .card-social .social-icon img {
     width: 100%;
