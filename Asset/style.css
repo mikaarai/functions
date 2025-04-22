@@ -189,7 +189,7 @@ h2 {
 }
 .card h4 {
     font-family: var(--font-family-description);
-    font-size: calc(1*var(--base-size));
+    font-size: var(--base-size);
     font-weight: 500;
     color: var(--color-gray-light);
 }
@@ -342,4 +342,29 @@ h2 {
     color: var(--color-gray-light);
     margin-top: calc(3*var(--margin-top));
 }
+  
+
+
+/* desktop */
+@media screen and (min-width: 768px) {
+
+    body {
+        margin-left: calc(8*var(--margin-right));
+        margin-right: calc(8*var(--margin-right));
+    }
+    h1 {
+      font-size: calc(8* var(--base-size));
+      margin-bottom: calc(2*var(--margin-bottom));
+      max-width: 70ch; 
+    }
+    h2 {
+      font-size: calc(1.5*var(--base-size));
+      max-width: 50ch; 
+    }
+    .footer-description {
+      font-size: calc(4*var(--base-size));
+      max-width: 40ch; 
+      padding-bottom: var(--padding-bottom);
+    }
+  }
   
