@@ -349,13 +349,16 @@ h2 {
 @media screen and (min-width: 768px) {
 
     body {
-        margin-left: calc(8*var(--margin-right));
-        margin-right: calc(8*var(--margin-right));
+        max-width: 1800px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
     h1 {
       font-size: calc(8* var(--base-size));
       margin-bottom: calc(2*var(--margin-bottom));
-      max-width: 70ch; 
+      max-width: 50ch; 
     }
     h2 {
       font-size: calc(1.5*var(--base-size));
@@ -366,5 +369,15 @@ h2 {
       max-width: 40ch; 
       padding-bottom: var(--padding-bottom);
     }
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
   }
-  
+  .card {
+    width: 30%; 
+  }
+}
+
