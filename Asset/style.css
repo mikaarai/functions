@@ -124,6 +124,12 @@ h2 {
     color: var(--color-gray-light);
     transition: all 0.2s ease;
 }
+.alumni,
+.parsons,
+.sayhi {
+  display: block;
+}
+
 
 
 
@@ -356,6 +362,15 @@ h2 {
         padding-left: 1rem;
         padding-right: 1rem;
     }
+    .sayhi {
+      display: block; 
+      margin-top: 0.5em;
+    }
+    .alumni,
+    .parsons {
+      display: inline-block;
+      margin-right: 0.5em;
+    }
     h1 {
       font-size: calc(8* var(--base-size));
       margin-bottom: calc(2*var(--margin-bottom));
@@ -363,7 +378,8 @@ h2 {
     }
     h2 {
       font-size: calc(1.5*var(--base-size));
-      max-width: 50ch; 
+      max-width: 58ch; 
+      margin-bottom: calc(3*var(--margin-bottom));
     }
     .footer-description {
       font-size: calc(4*var(--base-size));
@@ -380,3 +396,27 @@ h2 {
   }
 }
 
+
+
+/* image */
+.parsonstudents {
+    height: 800px;
+  }
+
+
+
+  /* CTA button */
+#cta-explore {
+    font-size: calc(1.2*var(--base-size));
+    padding: 1.2em 4em;
+}
+#cta-join {
+    font-size: calc(1.2*var(--base-size));
+    padding: 1.2em 4em;
+    margin-left: var(--margin-right);
+    margin-bottom: calc(7*var(--margin-bottom));
+} 
+.footer-button {
+    font-size: calc(1.2*var(--base-size));
+    padding: 1.2em 4em;
+}
