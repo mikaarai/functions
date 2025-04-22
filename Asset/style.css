@@ -42,8 +42,10 @@
 
 /* heading */
 body {
+    width: 100%;
     padding-left: var(--padding-left);
     padding-right: var(--padding-right);
+    overflow-x: hidden;
 }
 h1 {
     margin-top: calc(6*var(--margin-top));
@@ -95,9 +97,14 @@ h2 {
 
 /* image */
 .parsonstudents {
-    margin-left: -1rem;
+    /* margin-left: -1rem;
     margin-right: -1rem;
-    margin-bottom: calc(3*var(--margin-top));
+    margin-bottom: calc(3*var(--margin-top)); */
+    display: block;
+    width: 100vw; 
+    height: 300px;
+    object-fit: cover;
+    margin: 0 auto;
   }
 
 
