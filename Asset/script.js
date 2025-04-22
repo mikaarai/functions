@@ -298,7 +298,7 @@ alumniData.forEach(person => {
   </div>
 
 		<h3>${person.fullName || "No Name"}</h3>
-		<h4>${person.program || "No Program"}, ${person.degree || "No Degree"}</h4>
+		<h4>${person.degree || "No Degree"}, ${person.program || "No Program"}</h4>
 		<p>🎓 ${person.graduated || "N/A"}</p>
 		<p>👨‍⚕️ ${person.role || "N/A"}</p>
 		<p>🎨 ${person.hobby || "N/A"}</p>
