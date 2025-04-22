@@ -88,7 +88,8 @@ let data = [
         "linkedin": "https://www.linkedin.com/in/nadiabatchelor/",
         "company": "SiteBolts",
         "portfolio": "https://nadabdesigns.com/",
-        "hobby": "Photography and 3D Design"
+        "hobby": "Photography and 3D Design",
+        openToWork: true,
     },
     {
         "fullName": "Ziwei Xing",
@@ -205,6 +206,7 @@ let data = [
         "company": "N/A",
         "portfolio": "https://tawnyshu.com",
         "hobby": "Knitting, crochet, sewing. Fiber arts :) check out my Instagram: @wontawn.crochets",
+        hiring: true,
     },
     {
         "fullName": "Mark Huang",
@@ -229,7 +231,8 @@ let data = [
         "linkedin": "https://www.linkedin.com/in/hamzaiqbaldesign",
         "company": "Nappr.io",
         "portfolio": "https://Hamzaiqbal.com",
-        "hobby": "Park Slope Food Coop for fun, friends, groceries, everything"
+        "hobby": "Park Slope Food Coop for fun, friends, groceries, everything",
+        openToMentor: true,
     },
     {
         "fullName": "Nattakitta Chuasiriphattana",
@@ -293,7 +296,8 @@ let data = [
         "linkedin": "https://www.linkedin.com/in/carlossalom/",
         "company": "N/A",
         "portfolio": "",
-        "hobby": "Soccer, cooking, writing, live music, running."
+        "hobby": "Soccer, cooking, writing, live music, running.",
+        openToChat: true,
     },
     {
         "fullName": "Seth Lukin",
@@ -306,6 +310,7 @@ let data = [
         "company": "n/a",
         "portfolio": "https://sethlukin.com/",
         "hobby": "",
+        openToChat: true,
     },
     {
         "fullName": "Andre Magracia",
@@ -343,7 +348,8 @@ let data = [
         "linkedin": "",
         "company": "N/A",
         "portfolio": "",
-        "hobby": ""
+        "hobby": "",
+        openToChat: true,
     },
     {
         "fullName": "Jenny Yen",
@@ -381,7 +387,8 @@ let data = [
         "linkedin": "https://www.linkedin.com/in/emmadesuyrot/",
         "company": "N/A",
         "portfolio": "https://readymag.website/5250755",
-        "hobby": "Padel Tennis, Running, Football (Soccer), F1, Illustrating"
+        "hobby": "Padel Tennis, Running, Football (Soccer), F1, Illustrating",
+        openToWork: true,
     },
     {
         "fullName": "Sachi Mavinkurve",
