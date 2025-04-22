@@ -275,9 +275,6 @@ h2 {
     margin-bottom: calc(0.5*var(--margin-bottom));
     font-family: var(--font-family-description);
     color: var(--color-gray-light);
-    /* position: relative;
-    display: inline-block;
-    width: fit-content; */
 }
 .dropdown select {
     font-size: var(--base-size);
@@ -298,6 +295,11 @@ h2 {
     top: 0;
     background-color: var(--background-color-primary);
 }
+/* filter in one row */
+.filters-row {
+    display: block;
+  }
+
 
 
 /* back to top */
@@ -355,6 +357,8 @@ h2 {
 /* desktop */
 @media screen and (min-width: 768px) {
 
+
+    /* heading */
     body {
         max-width: 1800px;
         margin-left: auto;
@@ -381,20 +385,6 @@ h2 {
       max-width: 58ch; 
       margin-bottom: calc(3*var(--margin-bottom));
     }
-    .footer-description {
-      font-size: calc(4*var(--base-size));
-      max-width: 40ch; 
-      padding-bottom: var(--padding-bottom);
-    }
-  .container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-  }
-  .card {
-    width: 100%; 
-  }
-}
 
 
 
@@ -409,14 +399,76 @@ h2 {
 #cta-explore {
     font-size: calc(1.2*var(--base-size));
     padding: 1.2em 4em;
+    cursor: pointer;
 }
 #cta-join {
     font-size: calc(1.2*var(--base-size));
     padding: 1.2em 4em;
     margin-left: var(--margin-right);
     margin-bottom: calc(7*var(--margin-bottom));
+    cursor: pointer;
 } 
+
+
+
+/* footer */
+.footer {
+    margin-right: -8rem;
+    margin-left: -8rem;
+    padding-left: 8rem;
+}
 .footer-button {
     font-size: calc(1.2*var(--base-size));
     padding: 1.2em 4em;
+    cursor: pointer;
+}
+.footer-description {
+    font-size: calc(4*var(--base-size));
+    max-width: 40ch; 
+    padding-bottom: var(--padding-bottom);
+  }
+
+
+
+/* card */
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.card {
+  width: 100%; 
+}
+
+
+
+/* dropdown */
+.dropdown select {
+    font-size: calc(1.2* var(--base-size));
+    padding: calc(1.55*var(--padding-top));
+}
+/* filter in one row */
+.filters-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+  }
+.search-box {
+    flex: 1;
+    max-width: 400px;
+  }
+
+.side-by-side {
+    flex: 2;
+    display: flex;
+    gap: 0.5rem;
+    padding-top: calc(.5*var(--padding-top));
+    margin-left: calc(4*var(--margin-right));
+  }
+#search-input {
+    padding: calc(1.5*var(--padding-top));
+    font-size: calc(1.2* var(--base-size));
+}
 }
