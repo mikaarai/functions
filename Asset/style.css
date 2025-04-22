@@ -174,7 +174,7 @@ h2 {
 
 /* card */
 .card {
-    margin-bottom: calc(1.5*var(--margin-bottom));
+    /* margin-bottom: calc(1.5*var(--margin-bottom)); */
     margin-top: calc(1.5*var(--margin-top));
     padding-top: calc(1.5*var(--padding-top));
     padding-bottom: calc(1.5*var(--padding-top));
@@ -361,8 +361,8 @@ h2 {
     /* heading */
     body {
         max-width: 1800px;
-        margin-left: 8rem;
-        margin-right: 8rem;
+        margin-left: auto;
+        margin-right: auto;
         padding-left: 1rem;
         padding-right: 1rem;
     }
@@ -438,6 +438,7 @@ h2 {
 }
 .card {
   width: 100%; 
+  margin-bottom: var(--margin-bottom);
 }
 
 
