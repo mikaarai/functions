@@ -361,8 +361,8 @@ h2 {
     /* heading */
     body {
         max-width: 1800px;
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: 8rem;
+        margin-right: 8rem;
         padding-left: 1rem;
         padding-right: 1rem;
     }
@@ -376,12 +376,12 @@ h2 {
       margin-right: 0.5em;
     }
     h1 {
-      font-size: calc(8* var(--base-size));
+      font-size: calc(6* var(--base-size));
       margin-bottom: calc(2*var(--margin-bottom));
       max-width: 50ch; 
     }
     h2 {
-      font-size: calc(1.5*var(--base-size));
+      font-size: calc(1.1*var(--base-size));
       max-width: 58ch; 
       margin-bottom: calc(3*var(--margin-bottom));
     }
@@ -390,7 +390,7 @@ h2 {
 
 /* image */
 .parsonstudents {
-    height: 800px;
+    height: 700px;
   }
 
 
@@ -398,12 +398,12 @@ h2 {
   /* CTA button */
 #cta-explore {
     font-size: calc(1.2*var(--base-size));
-    padding: 1.2em 4em;
+    padding: 1.1em 3em;
     cursor: pointer;
 }
 #cta-join {
     font-size: calc(1.2*var(--base-size));
-    padding: 1.2em 4em;
+    padding: 1.1em 3em;
     margin-left: var(--margin-right);
     margin-bottom: calc(7*var(--margin-bottom));
     cursor: pointer;
@@ -418,7 +418,7 @@ h2 {
     padding-left: 8rem;
 }
 .footer-button {
-    font-size: calc(1.2*var(--base-size));
+    font-size: calc(1.1*var(--base-size));
     padding: 1.2em 4em;
     cursor: pointer;
 }
