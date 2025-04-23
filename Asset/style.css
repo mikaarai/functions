@@ -356,7 +356,13 @@ h2 {
 
 /* desktop */
 @media screen and (min-width: 768px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
+      
 
     /* heading */
     body {
