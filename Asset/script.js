@@ -288,13 +288,13 @@ alumniData.forEach(person => {
 	card.innerHTML = `
 	<div class="chat-tag">
  	${person.openToChat ? `
-      <div class="chat-tag"><img src="asset/chat-tag.svg"><span>Open to chat</span></div>` : ""}
+      <div class="chat-tag"><img src="Asset/chat-tag.svg"><span>Open to chat</span></div>` : ""}
     ${person.openToWork ? `
-      <div class="chat-tag"><img src="asset/work-tag.svg"><span>Open to work</span></div>` : ""}
+      <div class="chat-tag"><img src="Asset/work-tag.svg"><span>Open to work</span></div>` : ""}
     ${person.openToMentor ? `
-      <div class="chat-tag"><img src="asset/mentor-tag.svg"><span>Open to mentor</span></div>` : ""}
+      <div class="chat-tag"><img src="Asset/mentor-tag.svg"><span>Open to mentor</span></div>` : ""}
     ${person.hiring ? `
-      <div class="chat-tag"><img src="asset/hiring-tag.svg"><span>Hiring</span></div>` : ""}
+      <div class="chat-tag"><img src="Asset/hiring-tag.svg"><span>Hiring</span></div>` : ""}
   </div>
 
 		<h3>${person.fullName || "No Name"}</h3>
@@ -305,9 +305,9 @@ alumniData.forEach(person => {
 		
 		
 		<div class="card-social">
-		${person.linkedin ? `<a href="${person.linkedin}" target="_blank" class="social-icon linkedin" aria-label="LinkedIn"><img src="asset/linkedin-icon.svg" alt="LinkedIn"></a>` : ""}
-		${person.email ? `<a href="mailto:${person.email}" class="social-icon email" aria-label="Email"><img src="asset/email-icon.svg" alt="Email"></a>` : ""}
-		 ${person.portfolio ? `<a href="${person.portfolio}" target="_blank" class="social-icon portfolio" aria-label="Portfolio"><img src="asset/portfolio-icon.svg" alt="Portfolio" /></a>` : ""}
+		${person.linkedin ? `<a href="${person.linkedin}" target="_blank" class="social-icon linkedin" aria-label="LinkedIn"><img src="Asset/linkedin-icon.svg" alt="LinkedIn"></a>` : ""}
+		${person.email ? `<a href="mailto:${person.email}" class="social-icon email" aria-label="Email"><img src="Asset/email-icon.svg" alt="Email"></a>` : ""}
+		 ${person.portfolio ? `<a href="${person.portfolio}" target="_blank" class="social-icon portfolio" aria-label="Portfolio"><img src="Asset/portfolio-icon.svg" alt="Portfolio" /></a>` : ""}
 		  </div>
 		</div>
 `;
