@@ -271,7 +271,8 @@ let data = [
         "company": "S&P Global",
         "portfolio": "",
         "hobby": "Dancing, cooking, art stuff(drawing, painting)",
-        hiring: true,
+        openToMentor: true,
+        openToChat: true,
     },
     {
         "fullName": "Yash Sonwaney",
