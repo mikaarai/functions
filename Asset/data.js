@@ -219,7 +219,7 @@ let data = [
         "company": "Meta",
         "portfolio": "",
         "hobby": "Cats, cars and coffee",
-        hiring: true,
+        openToChat: true,
     },
     {
         "fullName": "Hamza Iqbal",
