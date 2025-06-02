@@ -336,8 +336,9 @@ let data = [
         "linkedin": "https://www.linkedin.com/in/giordana-pulpo",
         "company": "Abstractive Health",
         "portfolio": "https://GiordanaPulpo.com",
-        "hobby": "Travelling, try new restaurants, hiking, photography, reading",
+        "hobby": "Camping, traveling try new restaurants, hiking, photography, reading",
         openToChat: true,
+        openToMentor: true,
     },
     {
         "fullName": "Yuri Kawada",
@@ -428,7 +429,7 @@ let data = [
         "company": "American Express",
         "portfolio": "",
         "hobby": "legos, reading, working out, cooking",
-        openToMentor: true,
+         openToChat: true,
     },
     {
         "fullName": "Jayna Choksi",
